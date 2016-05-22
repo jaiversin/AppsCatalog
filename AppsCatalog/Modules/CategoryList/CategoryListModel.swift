@@ -9,10 +9,10 @@
 import Foundation
 
 struct CategoryListModel {
-    let identifier : NSString
-    let label : NSString
+    let identifier : String
+    let label : String
     
-    init (identifier:NSString, label:NSString){
+    init (identifier:String, label:String){
         self.identifier = identifier
         self.label = label
     }

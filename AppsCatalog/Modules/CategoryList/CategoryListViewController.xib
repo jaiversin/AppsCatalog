@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CategoryListViewController" customModule="AppsCatalog" customModuleProvider="target">
             <connections>
+                <outlet property="categoriesTable" destination="Ymp-7Q-xcy" id="Tyc-S6-sIz"/>
                 <outlet property="noResultsButton" destination="KE7-kX-IT6" id="uxj-Ym-kO9"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -16,12 +17,22 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KE7-kX-IT6">
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KE7-kX-IT6">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                     <state key="normal" title="No se encontraron resultados. Recargar!"/>
                 </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ymp-7Q-xcy">
+                    <rect key="frame" x="0.0" y="0.0" width="605" height="600"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="KE7-kX-IT6" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="KIE-GX-egi"/>
+                <constraint firstAttribute="trailing" secondItem="KE7-kX-IT6" secondAttribute="trailing" id="PMQ-8e-L2r"/>
+                <constraint firstItem="KE7-kX-IT6" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="oTK-cN-ynk"/>
+                <constraint firstAttribute="bottom" secondItem="KE7-kX-IT6" secondAttribute="bottom" id="ypR-AC-4Dw"/>
+            </constraints>
         </view>
     </objects>
 </document>

@@ -13,6 +13,8 @@ class CategoryListPresenter: CateogryListInteractorOutProtocol, CategoryListPres
 //    var categoryListWireframe : CategoryListWireframe?
     var categoryListInterface : CategoryListViewInterface?
     
+    
+    
 // MARK: Implementación de CateogryListInteractorOutProtocol
     func receiveCategories(data: [CategoryListModel]) {
         if data.count != 0 {
