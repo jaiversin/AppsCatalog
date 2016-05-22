@@ -6,10 +6,6 @@ target 'AppsCatalog' do
   use_frameworks!
 
   # Pods for AppsCatalog
-  target 'AppsCatalog' do
-
-  end
-
   target 'AppsCatalogTests' do
     inherit! :search_paths
     # Pods for testing
