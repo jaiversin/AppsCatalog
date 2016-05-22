@@ -5,22 +5,64 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Category List View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AppsCatalog" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
+                <viewController storyboardIdentifier="CategoryList" id="BYZ-38-t0r" customClass="CategoryListViewController" customModule="AppsCatalog" customModuleProvider="target" sceneMemberID="viewController">
+                    <connections>
+                        <outlet property="noResultsView" destination="8bC-Xf-vdC" id="sJr-aR-CnA"/>
+                        <outlet property="view" destination="fWh-vC-EY7" id="KOR-1W-hgg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="fWh-vC-EY7">
+                    <rect key="frame" x="0.0" y="0.0" width="432" height="521"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <prototypes>
+                        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryCell" textLabel="0Qp-ST-gEg" style="IBUITableViewCellStyleDefault" id="YIe-1A-83s">
+                            <rect key="frame" x="0.0" y="28" width="432" height="44"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YIe-1A-83s" id="dOt-JL-yqN">
+                                <rect key="frame" x="0.0" y="0.0" width="432" height="43"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <subviews>
+                                    <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0Qp-ST-gEg">
+                                        <rect key="frame" x="15" y="0.0" width="402" height="43"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </tableViewCellContentView>
+                        </tableViewCell>
+                    </prototypes>
+                    <connections>
+                        <outlet property="dataSource" destination="BYZ-38-t0r" id="t6g-Ho-agh"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="52E-Wp-EXY"/>
+                    </connections>
+                </tableView>
+                <view contentMode="scaleToFill" id="8bC-Xf-vdC" userLabel="No results">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G6h-bW-oVX">
+                            <rect key="frame" x="162" y="285" width="277" height="30"/>
+                            <state key="normal" title="No se encontraron resultados. Recargar!"/>
+                            <connections>
+                                <action selector="reloadResults:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tIi-gY-IGJ"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="G6h-bW-oVX" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="G1d-ng-PEM"/>
+                        <constraint firstItem="G6h-bW-oVX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IOE-Zf-3fS"/>
+                    </constraints>
+                </view>
             </objects>
+            <point key="canvasLocation" x="206" y="339"/>
         </scene>
     </scenes>
 </document>
