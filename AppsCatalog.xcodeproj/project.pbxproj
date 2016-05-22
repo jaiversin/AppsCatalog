@@ -15,6 +15,12 @@
 		08C6C37F1CF0DD9C00D4F36C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08C6C37D1CF0DD9C00D4F36C /* LaunchScreen.storyboard */; };
 		08C6C38A1CF0DD9C00D4F36C /* AppsCatalogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C6C3891CF0DD9C00D4F36C /* AppsCatalogTests.swift */; };
 		08C6C3951CF0DD9D00D4F36C /* AppsCatalogUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C6C3941CF0DD9D00D4F36C /* AppsCatalogUITests.swift */; };
+		08C6C3A51CF20EDD00D4F36C /* CategoryListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C6C3A41CF20EDD00D4F36C /* CategoryListModel.swift */; };
+		08C6C3A71CF2119800D4F36C /* CategoryListViewInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C6C3A61CF2119800D4F36C /* CategoryListViewInterface.swift */; };
+		08C6C3A91CF222C100D4F36C /* CategoryListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C6C3A81CF222C100D4F36C /* CategoryListInteractor.swift */; };
+		08C6C3AB1CF2281000D4F36C /* CategoryListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C6C3AA1CF2281000D4F36C /* CategoryListPresenter.swift */; };
+		08C6C3AE1CF22CCA00D4F36C /* CategoryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C6C3AC1CF22CCA00D4F36C /* CategoryListViewController.swift */; };
+		08C6C3AF1CF22CCA00D4F36C /* CategoryListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08C6C3AD1CF22CCA00D4F36C /* CategoryListViewController.xib */; };
 		626B3A9922516B3F7604DD30 /* Pods_AppsCatalogTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45C685D8475552EEF4FEEDC2 /* Pods_AppsCatalogTests.framework */; };
 		C87AED1F5D2C1D1EB8D4DEF3 /* Pods_AppsCatalog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFB7B1F608291CF32813AB9D /* Pods_AppsCatalog.framework */; };
 		E32EE228848724654D48D56F /* Pods_AppsCatalogUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D75F2E0C553B94986754A16 /* Pods_AppsCatalogUITests.framework */; };
@@ -52,6 +58,12 @@
 		08C6C3901CF0DD9C00D4F36C /* AppsCatalogUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppsCatalogUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		08C6C3941CF0DD9D00D4F36C /* AppsCatalogUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsCatalogUITests.swift; sourceTree = "<group>"; };
 		08C6C3961CF0DD9D00D4F36C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		08C6C3A41CF20EDD00D4F36C /* CategoryListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoryListModel.swift; path = Modules/CategoryList/CategoryListModel.swift; sourceTree = "<group>"; };
+		08C6C3A61CF2119800D4F36C /* CategoryListViewInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoryListViewInterface.swift; path = Modules/CategoryList/CategoryListViewInterface.swift; sourceTree = "<group>"; };
+		08C6C3A81CF222C100D4F36C /* CategoryListInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoryListInteractor.swift; path = Modules/CategoryList/CategoryListInteractor.swift; sourceTree = "<group>"; };
+		08C6C3AA1CF2281000D4F36C /* CategoryListPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryListPresenter.swift; sourceTree = "<group>"; };
+		08C6C3AC1CF22CCA00D4F36C /* CategoryListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoryListViewController.swift; path = Modules/CategoryList/CategoryListViewController.swift; sourceTree = "<group>"; };
+		08C6C3AD1CF22CCA00D4F36C /* CategoryListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CategoryListViewController.xib; path = Modules/CategoryList/CategoryListViewController.xib; sourceTree = "<group>"; };
 		23EB89B588FCFE6EB9D9FC77 /* Pods-AppsCatalogUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppsCatalogUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AppsCatalogUITests/Pods-AppsCatalogUITests.release.xcconfig"; sourceTree = "<group>"; };
 		2F73E8027E1F9108AF8FB0E7 /* Pods-AppsCatalogTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppsCatalogTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AppsCatalogTests/Pods-AppsCatalogTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3AAE9458EAD9C38BF4BAE257 /* Pods-AppsCatalogTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppsCatalogTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AppsCatalogTests/Pods-AppsCatalogTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -116,6 +128,7 @@
 		08C6C3701CF0DD9C00D4F36C /* AppsCatalog */ = {
 			isa = PBXGroup;
 			children = (
+				08C6C3A21CF20E4E00D4F36C /* Modules */,
 				08C6C3711CF0DD9C00D4F36C /* AppDelegate.swift */,
 				08C6C3731CF0DD9C00D4F36C /* ViewController.swift */,
 				08C6C3751CF0DD9C00D4F36C /* Main.storyboard */,
@@ -143,6 +156,27 @@
 				08C6C3961CF0DD9D00D4F36C /* Info.plist */,
 			);
 			path = AppsCatalogUITests;
+			sourceTree = "<group>";
+		};
+		08C6C3A21CF20E4E00D4F36C /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				08C6C3A31CF20E5500D4F36C /* CategoryList */,
+			);
+			name = Modules;
+			sourceTree = "<group>";
+		};
+		08C6C3A31CF20E5500D4F36C /* CategoryList */ = {
+			isa = PBXGroup;
+			children = (
+				08C6C3A41CF20EDD00D4F36C /* CategoryListModel.swift */,
+				08C6C3A61CF2119800D4F36C /* CategoryListViewInterface.swift */,
+				08C6C3A81CF222C100D4F36C /* CategoryListInteractor.swift */,
+				08C6C3AA1CF2281000D4F36C /* CategoryListPresenter.swift */,
+				08C6C3AC1CF22CCA00D4F36C /* CategoryListViewController.swift */,
+				08C6C3AD1CF22CCA00D4F36C /* CategoryListViewController.xib */,
+			);
+			name = CategoryList;
 			sourceTree = "<group>";
 		};
 		2EC25940CA921E6791085E72 /* Pods */ = {
@@ -244,6 +278,7 @@
 				TargetAttributes = {
 					08C6C36D1CF0DD9C00D4F36C = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = DZL29QC9UE;
 					};
 					08C6C3841CF0DD9C00D4F36C = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -280,6 +315,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08C6C3AF1CF22CCA00D4F36C /* CategoryListViewController.xib in Resources */,
 				08C6C37F1CF0DD9C00D4F36C /* LaunchScreen.storyboard in Resources */,
 				08C6C37C1CF0DD9C00D4F36C /* Assets.xcassets in Resources */,
 				08C6C3771CF0DD9C00D4F36C /* Main.storyboard in Resources */,
@@ -430,9 +466,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08C6C3AE1CF22CCA00D4F36C /* CategoryListViewController.swift in Sources */,
+				08C6C3AB1CF2281000D4F36C /* CategoryListPresenter.swift in Sources */,
 				08C6C3741CF0DD9C00D4F36C /* ViewController.swift in Sources */,
+				08C6C3A51CF20EDD00D4F36C /* CategoryListModel.swift in Sources */,
+				08C6C3A91CF222C100D4F36C /* CategoryListInteractor.swift in Sources */,
 				08C6C3721CF0DD9C00D4F36C /* AppDelegate.swift in Sources */,
 				08C6C37A1CF0DD9C00D4F36C /* AppsCatalog.xcdatamodeld in Sources */,
+				08C6C3A71CF2119800D4F36C /* CategoryListViewInterface.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -577,10 +618,13 @@
 			baseConfigurationReference = 6893C4D4B7FD22B2D78393AF /* Pods-AppsCatalog.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = AppsCatalog/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.jaiversin.AppsCatalog;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -589,10 +633,13 @@
 			baseConfigurationReference = 4607872A210CC1AA81A92181 /* Pods-AppsCatalog.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = AppsCatalog/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.jaiversin.AppsCatalog;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
