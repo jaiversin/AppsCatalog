@@ -1,0 +1,6 @@
+framework module Pods_AppsCatalogTests {
+  umbrella header "Pods-AppsCatalogTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
