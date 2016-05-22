@@ -7,3 +7,15 @@
 //
 
 import Foundation
+
+struct CategoryListModel {
+    let identifier : NSString
+    let label : NSString
+    
+    init (identifier:NSString, label:NSString){
+        self.identifier = identifier
+        self.label = label
+    }
+    
+    
+}
