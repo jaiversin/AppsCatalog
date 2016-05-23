@@ -64,6 +64,53 @@
             </objects>
             <point key="canvasLocation" x="206" y="339"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="XGg-2h-z6f">
+            <objects>
+                <viewController id="3KQ-xH-lHU" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rSx-5c-YP9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="fsK-2O-ZEl">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ypT-81-yeI">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <cells>
+                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="71g-Hq-VoU">
+                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                        </collectionViewCell>
+                    </cells>
+                </collectionView>
+                <view contentMode="scaleToFill" id="b79-SU-sU9">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UYN-DI-vdI">
+                            <rect key="frame" x="162" y="285" width="277" height="30"/>
+                            <state key="normal" title="No se encontraron resultados. Recargar!"/>
+                            <connections>
+                                <action selector="reloadResults:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N4o-Ue-80k"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="UYN-DI-vdI" firstAttribute="centerX" secondItem="b79-SU-sU9" secondAttribute="centerX" id="AAX-Bd-HgS"/>
+                        <constraint firstItem="UYN-DI-vdI" firstAttribute="centerY" secondItem="b79-SU-sU9" secondAttribute="centerY" id="VGg-Av-9U1"/>
+                    </constraints>
+                </view>
+            </objects>
+            <point key="canvasLocation" x="1275" y="381"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="mpP-g5-D2o">
             <objects>

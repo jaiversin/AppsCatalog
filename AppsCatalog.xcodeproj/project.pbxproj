@@ -25,6 +25,7 @@
 		08C6C3B31CF2429D00D4F36C /* CategoryListWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C6C3B21CF2429D00D4F36C /* CategoryListWireframe.swift */; };
 		08C6C3B61CF2436200D4F36C /* RootWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C6C3B51CF2436200D4F36C /* RootWireframe.swift */; };
 		08C6C3B91CF2C3B700D4F36C /* AppListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C6C3B81CF2C3B700D4F36C /* AppListModel.swift */; };
+		08C6C3BB1CF2CA4D00D4F36C /* AppListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C6C3BA1CF2CA4D00D4F36C /* AppListViewController.swift */; };
 		626B3A9922516B3F7604DD30 /* Pods_AppsCatalogTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45C685D8475552EEF4FEEDC2 /* Pods_AppsCatalogTests.framework */; };
 		C87AED1F5D2C1D1EB8D4DEF3 /* Pods_AppsCatalog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFB7B1F608291CF32813AB9D /* Pods_AppsCatalog.framework */; };
 		E32EE228848724654D48D56F /* Pods_AppsCatalogUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D75F2E0C553B94986754A16 /* Pods_AppsCatalogUITests.framework */; };
@@ -72,6 +73,7 @@
 		08C6C3B21CF2429D00D4F36C /* CategoryListWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoryListWireframe.swift; path = Modules/CategoryList/CategoryListWireframe.swift; sourceTree = "<group>"; };
 		08C6C3B51CF2436200D4F36C /* RootWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RootWireframe.swift; path = General/RootWireframe.swift; sourceTree = "<group>"; };
 		08C6C3B81CF2C3B700D4F36C /* AppListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppListModel.swift; path = Modules/AppList/AppListModel.swift; sourceTree = "<group>"; };
+		08C6C3BA1CF2CA4D00D4F36C /* AppListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppListViewController.swift; path = Modules/AppList/AppListViewController.swift; sourceTree = "<group>"; };
 		23EB89B588FCFE6EB9D9FC77 /* Pods-AppsCatalogUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppsCatalogUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AppsCatalogUITests/Pods-AppsCatalogUITests.release.xcconfig"; sourceTree = "<group>"; };
 		2F73E8027E1F9108AF8FB0E7 /* Pods-AppsCatalogTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppsCatalogTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AppsCatalogTests/Pods-AppsCatalogTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3AAE9458EAD9C38BF4BAE257 /* Pods-AppsCatalogTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppsCatalogTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AppsCatalogTests/Pods-AppsCatalogTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				08C6C3B81CF2C3B700D4F36C /* AppListModel.swift */,
+				08C6C3BA1CF2CA4D00D4F36C /* AppListViewController.swift */,
 			);
 			name = AppsList;
 			sourceTree = "<group>";
@@ -500,6 +503,7 @@
 				08C6C3B91CF2C3B700D4F36C /* AppListModel.swift in Sources */,
 				08C6C3A51CF20EDD00D4F36C /* CategoryListModel.swift in Sources */,
 				08C6C3A91CF222C100D4F36C /* CategoryListInteractor.swift in Sources */,
+				08C6C3BB1CF2CA4D00D4F36C /* AppListViewController.swift in Sources */,
 				08C6C3721CF0DD9C00D4F36C /* AppDelegate.swift in Sources */,
 				08C6C3B31CF2429D00D4F36C /* CategoryListWireframe.swift in Sources */,
 				08C6C37A1CF0DD9C00D4F36C /* AppsCatalog.xcdatamodeld in Sources */,
