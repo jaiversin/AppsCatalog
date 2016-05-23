@@ -10,7 +10,7 @@ import Foundation
 
 class CategoryListPresenter: CateogryListInteractorOutProtocol, CategoryListPresenterInterface {
     var categoryListInteractor : CateogryListInteractorInProtocol?
-//    var categoryListWireframe : CategoryListWireframe?
+    var categoryListWireframe : CategoryListWireframe?
     var categoryListInterface : CategoryListViewInterface?
     
     
@@ -26,10 +26,17 @@ class CategoryListPresenter: CateogryListInteractorOutProtocol, CategoryListPres
         }
     }
     
-// MARK: Implementación de CategoryListPresenterInterface
+// MARK: Implementación de CategoryListPresenterInterface (Module interface)
     func reloadCategories() {
         self.categoryListInteractor?.getCategories({ (data) in
            //Implementación con bloques vacía. Experimental por ahora para adaptar VIPER con callbacks.
         });
+    }
+    
+    func loadCategories() {
+        NSLog("primera carga de categorías")
+        self.categoryListInteractor?.getCategories({ (data) in
+            
+        })
     }
 }
