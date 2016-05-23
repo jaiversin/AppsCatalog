@@ -21,8 +21,16 @@ class CategoryListViewController: UITableViewController, CategoryListViewInterfa
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.categoriesTable = tableView
+        
+        
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        self.categoryListPresenter?.loadCategories()
     }
     
     override func didReceiveMemoryWarning() {
