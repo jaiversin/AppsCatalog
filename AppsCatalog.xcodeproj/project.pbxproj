@@ -24,6 +24,7 @@
 		08C6C3B11CF2424800D4F36C /* AppConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C6C3B01CF2424800D4F36C /* AppConfigurator.swift */; };
 		08C6C3B31CF2429D00D4F36C /* CategoryListWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C6C3B21CF2429D00D4F36C /* CategoryListWireframe.swift */; };
 		08C6C3B61CF2436200D4F36C /* RootWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C6C3B51CF2436200D4F36C /* RootWireframe.swift */; };
+		08C6C3B91CF2C3B700D4F36C /* AppListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C6C3B81CF2C3B700D4F36C /* AppListModel.swift */; };
 		626B3A9922516B3F7604DD30 /* Pods_AppsCatalogTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45C685D8475552EEF4FEEDC2 /* Pods_AppsCatalogTests.framework */; };
 		C87AED1F5D2C1D1EB8D4DEF3 /* Pods_AppsCatalog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFB7B1F608291CF32813AB9D /* Pods_AppsCatalog.framework */; };
 		E32EE228848724654D48D56F /* Pods_AppsCatalogUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D75F2E0C553B94986754A16 /* Pods_AppsCatalogUITests.framework */; };
@@ -70,6 +71,7 @@
 		08C6C3B01CF2424800D4F36C /* AppConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConfigurator.swift; sourceTree = "<group>"; };
 		08C6C3B21CF2429D00D4F36C /* CategoryListWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoryListWireframe.swift; path = Modules/CategoryList/CategoryListWireframe.swift; sourceTree = "<group>"; };
 		08C6C3B51CF2436200D4F36C /* RootWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RootWireframe.swift; path = General/RootWireframe.swift; sourceTree = "<group>"; };
+		08C6C3B81CF2C3B700D4F36C /* AppListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppListModel.swift; path = Modules/AppList/AppListModel.swift; sourceTree = "<group>"; };
 		23EB89B588FCFE6EB9D9FC77 /* Pods-AppsCatalogUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppsCatalogUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AppsCatalogUITests/Pods-AppsCatalogUITests.release.xcconfig"; sourceTree = "<group>"; };
 		2F73E8027E1F9108AF8FB0E7 /* Pods-AppsCatalogTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppsCatalogTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AppsCatalogTests/Pods-AppsCatalogTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3AAE9458EAD9C38BF4BAE257 /* Pods-AppsCatalogTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppsCatalogTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AppsCatalogTests/Pods-AppsCatalogTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -137,13 +139,13 @@
 				08C6C3B41CF2434E00D4F36C /* General */,
 				08C6C3A21CF20E4E00D4F36C /* Modules */,
 				08C6C3711CF0DD9C00D4F36C /* AppDelegate.swift */,
+				08C6C3B01CF2424800D4F36C /* AppConfigurator.swift */,
 				08C6C3731CF0DD9C00D4F36C /* ViewController.swift */,
 				08C6C3751CF0DD9C00D4F36C /* Main.storyboard */,
 				08C6C37B1CF0DD9C00D4F36C /* Assets.xcassets */,
 				08C6C37D1CF0DD9C00D4F36C /* LaunchScreen.storyboard */,
 				08C6C3801CF0DD9C00D4F36C /* Info.plist */,
 				08C6C3781CF0DD9C00D4F36C /* AppsCatalog.xcdatamodeld */,
-				08C6C3B01CF2424800D4F36C /* AppConfigurator.swift */,
 			);
 			path = AppsCatalog;
 			sourceTree = "<group>";
@@ -169,6 +171,7 @@
 		08C6C3A21CF20E4E00D4F36C /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				08C6C3B71CF25AE900D4F36C /* AppsList */,
 				08C6C3A31CF20E5500D4F36C /* CategoryList */,
 			);
 			name = Modules;
@@ -194,6 +197,14 @@
 				08C6C3B51CF2436200D4F36C /* RootWireframe.swift */,
 			);
 			name = General;
+			sourceTree = "<group>";
+		};
+		08C6C3B71CF25AE900D4F36C /* AppsList */ = {
+			isa = PBXGroup;
+			children = (
+				08C6C3B81CF2C3B700D4F36C /* AppListModel.swift */,
+			);
+			name = AppsList;
 			sourceTree = "<group>";
 		};
 		2EC25940CA921E6791085E72 /* Pods */ = {
@@ -486,6 +497,7 @@
 				08C6C3AE1CF22CCA00D4F36C /* CategoryListViewController.swift in Sources */,
 				08C6C3AB1CF2281000D4F36C /* CategoryListPresenter.swift in Sources */,
 				08C6C3741CF0DD9C00D4F36C /* ViewController.swift in Sources */,
+				08C6C3B91CF2C3B700D4F36C /* AppListModel.swift in Sources */,
 				08C6C3A51CF20EDD00D4F36C /* CategoryListModel.swift in Sources */,
 				08C6C3A91CF222C100D4F36C /* CategoryListInteractor.swift in Sources */,
 				08C6C3721CF0DD9C00D4F36C /* AppDelegate.swift in Sources */,

@@ -13,11 +13,13 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    
+    let configurator:AppConfigurator =  AppConfigurator()
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
+        configurator.installRootViewControllerIntoWindow(window!)
         
         return true
     }
