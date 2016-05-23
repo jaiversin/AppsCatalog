@@ -3,9 +3,10 @@ Catálogo de aplicaciones de iTunes
 
 Implementación en Swift basado en arquitectura VIPER con modificaciones. 
 
-Ejecutar
+## Para correr la prueba
 
-'' pod install
+Instalar dependencias antes de correr
 
+    pod install
 
-
+Ejecutar el archivo AppsCatalog.xcworkspace
