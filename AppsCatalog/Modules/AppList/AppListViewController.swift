@@ -9,8 +9,9 @@
 import UIKit
 
 var AppListCellIdentifier = "AppListCell"
+var AppListGridCellIdentifier = "AppListGridCell"
 
-class AppListViewController: UIViewController, AppListViewInterface, UITableViewDelegate, UITableViewDataSource {
+class AppListViewController: UIViewController, AppListViewInterface, UITableViewDelegate, UITableViewDataSource, UICollectionViewDelegate, UICollectionViewDataSource {
 
     var appListPresenter: AppListPresenter?
     var dataSource: [AppListModel]?
@@ -18,6 +19,7 @@ class AppListViewController: UIViewController, AppListViewInterface, UITableView
     @IBOutlet weak var noResultsButton: UIButton!
     @IBOutlet var noResultsView: UIView!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
         configureView()
@@ -85,4 +87,24 @@ class AppListViewController: UIViewController, AppListViewInterface, UITableView
         
 //        self.categoryListPresenter?.showAppListForCategory((currentCategory?.identifier)!)
     }
+    
+    
+    // MARK: TableView Datasource
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return (dataSource?.count)!
+    }
+    
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let currentApp = self.dataSource?[indexPath.row]
+        
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(AppListGridCellIdentifier, forIndexPath: indexPath) as! AppListGridCell
+        
+        cell.backgroundColor = UIColor.lightGrayColor()
+        
+        cell.name.text = currentApp?.name
+        cell.icon.image = UIImage(named: (currentApp?.iconPath)!)
+        
+        return cell
+    }
+    
 }
