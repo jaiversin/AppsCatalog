@@ -39,4 +39,8 @@ class CategoryListPresenter: CateogryListInteractorOutProtocol, CategoryListPres
             
         })
     }
+    
+    func showAppListForCategory(categoryId: String) {
+        categoryListWireframe?.presentAppListForCategory(categoryId)
+    }
 }

@@ -7,3 +7,33 @@
 //
 
 import Foundation
+
+protocol AppListInteractorInProtocol {
+    func getAppListForCategory(category: String)
+}
+
+protocol AppListInteractorOutProtocol {
+    func receiveAppList(data: Array<AppListModel>)
+}
+
+class AppListInteractor: AppListInteractorInProtocol {
+    var output: AppListInteractorOutProtocol?
+    
+    init() {
+        
+    }
+    
+    
+    func getAppListForCategory(category: String) {
+        let firstApp = AppListModel(id: "1", name:"a", iconPath: "icon.jpg", summary: "Summary A", price: "$1", categoryId: "1", categoryName: "Games")
+        let secondApp = AppListModel(id: "2", name:"b", iconPath: "icon.jpg", summary: "Summary A", price: "$1", categoryId: "1", categoryName: "Games")
+        
+        let appsList = [firstApp, secondApp]
+        
+        self.output?.receiveAppList(appsList)
+        
+        
+        
+    }
+    
+}
