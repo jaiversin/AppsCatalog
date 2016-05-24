@@ -33,6 +33,7 @@
 		08C6C3C51CF3D91A00D4F36C /* BaseWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C6C3C41CF3D91A00D4F36C /* BaseWireframe.swift */; };
 		08C6C3C81CF3EFD800D4F36C /* AppListPresentationTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C6C3C71CF3EFD800D4F36C /* AppListPresentationTransition.swift */; };
 		08C6C3CA1CF4055400D4F36C /* AppListDismissTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C6C3C91CF4055400D4F36C /* AppListDismissTransition.swift */; };
+		08C6C3CC1CF4179600D4F36C /* AppListGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C6C3CB1CF4179600D4F36C /* AppListGridCell.swift */; };
 		626B3A9922516B3F7604DD30 /* Pods_AppsCatalogTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45C685D8475552EEF4FEEDC2 /* Pods_AppsCatalogTests.framework */; };
 		C87AED1F5D2C1D1EB8D4DEF3 /* Pods_AppsCatalog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFB7B1F608291CF32813AB9D /* Pods_AppsCatalog.framework */; };
 		E32EE228848724654D48D56F /* Pods_AppsCatalogUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D75F2E0C553B94986754A16 /* Pods_AppsCatalogUITests.framework */; };
@@ -88,6 +89,7 @@
 		08C6C3C41CF3D91A00D4F36C /* BaseWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseWireframe.swift; path = General/BaseWireframe.swift; sourceTree = "<group>"; };
 		08C6C3C71CF3EFD800D4F36C /* AppListPresentationTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppListPresentationTransition.swift; path = Modules/AppList/UI/AppListPresentationTransition.swift; sourceTree = "<group>"; };
 		08C6C3C91CF4055400D4F36C /* AppListDismissTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppListDismissTransition.swift; path = Modules/AppList/AppListDismissTransition.swift; sourceTree = "<group>"; };
+		08C6C3CB1CF4179600D4F36C /* AppListGridCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppListGridCell.swift; path = Modules/AppList/UI/AppListGridCell.swift; sourceTree = "<group>"; };
 		23EB89B588FCFE6EB9D9FC77 /* Pods-AppsCatalogUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppsCatalogUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AppsCatalogUITests/Pods-AppsCatalogUITests.release.xcconfig"; sourceTree = "<group>"; };
 		2F73E8027E1F9108AF8FB0E7 /* Pods-AppsCatalogTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppsCatalogTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AppsCatalogTests/Pods-AppsCatalogTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3AAE9458EAD9C38BF4BAE257 /* Pods-AppsCatalogTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppsCatalogTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AppsCatalogTests/Pods-AppsCatalogTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -235,6 +237,7 @@
 			children = (
 				08C6C3C71CF3EFD800D4F36C /* AppListPresentationTransition.swift */,
 				08C6C3C91CF4055400D4F36C /* AppListDismissTransition.swift */,
+				08C6C3CB1CF4179600D4F36C /* AppListGridCell.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -529,6 +532,7 @@
 				08C6C3AE1CF22CCA00D4F36C /* CategoryListViewController.swift in Sources */,
 				08C6C3AB1CF2281000D4F36C /* CategoryListPresenter.swift in Sources */,
 				08C6C3BF1CF3D3CA00D4F36C /* AppListPresenter.swift in Sources */,
+				08C6C3CC1CF4179600D4F36C /* AppListGridCell.swift in Sources */,
 				08C6C3741CF0DD9C00D4F36C /* ViewController.swift in Sources */,
 				08C6C3B91CF2C3B700D4F36C /* AppListModel.swift in Sources */,
 				08C6C3A51CF20EDD00D4F36C /* CategoryListModel.swift in Sources */,
