@@ -24,8 +24,15 @@ class AppConfigurator {
     func makeInitialConfig()  {
         let rootWireframe = RootWireframe()
         
+        //CategoryList
         let categoryListPresenter = CategoryListPresenter()
         let categoryListInteractor = CategoryListInteractor()
+        
+        
+        //AppList
+        let appListWireframe = AppListWireframe()
+        let appListInteractor = AppListInteractor()
+        let appListPresenter = AppListPresenter()
         
         categoryListInteractor.output = categoryListPresenter
         
@@ -34,6 +41,20 @@ class AppConfigurator {
         
         categoryListWireframe.categoryListPresenter = categoryListPresenter
         categoryListWireframe.rootWireframe = rootWireframe
+        
+        categoryListWireframe.appListWireframe = appListWireframe
+        
+        
+        appListInteractor.output = appListPresenter
+        
+        appListWireframe.appListPresenter = appListPresenter
+        
+        appListPresenter.appListWireframe = appListWireframe
+        appListPresenter.appListInteractor = appListInteractor
+        
+        
+        
+        
         
     }
 }
