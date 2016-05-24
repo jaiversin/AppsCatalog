@@ -83,4 +83,10 @@ class CategoryListViewController: UITableViewController, CategoryListViewInterfa
         return cell
         
     }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let currentCategory = self.tableDataSource?[indexPath.row]
+        
+        self.categoryListPresenter?.showAppListForCategory((currentCategory?.identifier)!)
+    }
 }

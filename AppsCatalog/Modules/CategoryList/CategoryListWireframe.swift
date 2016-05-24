@@ -9,9 +9,11 @@
 import Foundation
 import UIKit
 
-class CategoryListWireframe: NSObject {
-    var rootWireframe:RootWireframe?
-    var categoryListPresenter:CategoryListPresenter?
+class CategoryListWireframe: BaseWireframe {
+    var rootWireframe: RootWireframe?
+    var appListWireframe: AppListWireframe?
+    var categoryListPresenter: CategoryListPresenter?
+    var currentController: UIViewController?
     
     func presentCategoryListViewAsRoot(window: UIWindow) {
         let viewController = listViewControllerFromStoryboard()
@@ -22,19 +24,19 @@ class CategoryListWireframe: NSObject {
         
         //Mostremos
         self.rootWireframe?.showRootViewController(viewController, inWindow: window)
+        
+        currentController = viewController
     }
     
+    func presentAppListForCategory(categoryId: String){
+        appListWireframe?.presentAppListFromController(currentController!)
+    }
     
 // MARK: Funciones utilitarias
-    func listViewControllerFromStoryboard() -> CategoryListViewController {
-        let storyboard = mainStoryboard()
-        let viewController = storyboard.instantiateViewControllerWithIdentifier("CategoryList") as! CategoryListViewController
-        return viewController
-    }
     
-    func mainStoryboard() -> UIStoryboard {
-        let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
-        return storyboard
+    func listViewControllerFromStoryboard() -> CategoryListViewController {
+        let viewController = viewControllerFromStoryboardWithIdentifier("CategoryList") as! CategoryListViewController
+        return viewController
     }
     
 }

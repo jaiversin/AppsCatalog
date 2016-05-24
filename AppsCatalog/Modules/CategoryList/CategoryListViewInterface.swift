@@ -16,4 +16,5 @@ protocol CategoryListViewInterface {
 protocol CategoryListPresenterInterface {//Module interface
     func reloadCategories()
     func loadCategories()
+    func showAppListForCategory(categoryId: String)
 }
