@@ -14,7 +14,7 @@ class AppListDataManager {
     
     func getAppListForCategoryId(categoryId: String, completionHandler: (completion: [AppListModel]) -> Void)  {
         
-        Alamofire.request(.GET, "https://itunes.apple.com/us/rss/topfreeapplications/limit=40/json").responseJSON { response in
+        Alamofire.request(.GET, "https://itunes.apple.com/us/rss/topfreeapplications/limit=20/json").responseJSON { response in
             
             var appListResponseModel = [AppListModel]()
             switch response.result {

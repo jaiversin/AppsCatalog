@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Haneke
 
 var AppListCellIdentifier = "AppListCell"
 var AppListGridCellIdentifier = "AppListGridCell"
@@ -20,6 +21,13 @@ class AppListViewController: UIViewController, AppListViewInterface, UITableView
     @IBOutlet var noResultsView: UIView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    @IBOutlet var detailView: UIView!
+    @IBOutlet weak var detailImage: UIImageView!
+    @IBOutlet weak var detailName: UILabel!
+    @IBOutlet weak var detailPrice: UILabel!
+    @IBOutlet weak var detailCategory: UILabel!
+    
     
     override func viewDidLoad() {
         configureView()
@@ -93,7 +101,8 @@ class AppListViewController: UIViewController, AppListViewInterface, UITableView
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let currentApp = self.dataSource?[indexPath.row]
         
-//        self.categoryListPresenter?.showAppListForCategory((currentCategory?.identifier)!)
+        showDetail(currentApp!)
+        
     }
     
     
@@ -109,10 +118,48 @@ class AppListViewController: UIViewController, AppListViewInterface, UITableView
         
         cell.backgroundColor = UIColor.lightGrayColor()
         
-        cell.name.text = currentApp?.name
-        cell.icon.image = UIImage(named: (currentApp?.iconPath)!)
+        cell.setNameLabel((currentApp?.name)!)
+        cell.setPriceLabel((currentApp?.price)!)
+        cell.setIconImage((currentApp?.iconPath)!)
         
         return cell
+    }
+    
+    
+    
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        let currentApp = self.dataSource?[indexPath.row]
+        
+        showDetail(currentApp!)
+    }
+    
+    @IBAction func closeDetail(sender: AnyObject) {
+        UIView.animateWithDuration(1.0, delay: 0.0, usingSpringWithDamping: 0.9, initialSpringVelocity: 10, options: .CurveEaseInOut, animations: {
+            self.detailView.center = CGPoint(x: self.view.frame.width * 2, y: self.view.frame.height * 2 )
+            
+            }, completion: {_ in
+                
+                
+                let delay = 0.1 * Double(NSEC_PER_SEC)
+                let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+                dispatch_after(time, dispatch_get_main_queue()) {
+                    self.detailView.center =  CGPoint(x: -500, y: -500)
+                }
+
+        })
+    }
+    
+    func showDetail (model: AppListModel!) {
+        self.view.addSubview(self.detailView)
+        
+        self.detailImage.hnk_setImageFromURL(NSURL(string:(model?.iconPath)!))
+        self.detailName.text = (model?.name)!
+        self.detailPrice.text = (model?.price)!
+        self.detailCategory.text = (model?.categoryName)!
+        
+        UIView.animateWithDuration(1.0, delay: 0.0, usingSpringWithDamping: 0.9, initialSpringVelocity: 10, options: .CurveEaseInOut, animations: {
+            self.detailView.center = self.view.center
+            }, completion: nil)
     }
     
 }

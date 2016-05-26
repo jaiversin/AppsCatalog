@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		086D5E0D1CF55F0700AC74D4 /* AppListDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086D5E0C1CF55F0700AC74D4 /* AppListDataManager.swift */; };
 		08C6C3721CF0DD9C00D4F36C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C6C3711CF0DD9C00D4F36C /* AppDelegate.swift */; };
 		08C6C3741CF0DD9C00D4F36C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C6C3731CF0DD9C00D4F36C /* ViewController.swift */; };
 		08C6C3771CF0DD9C00D4F36C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08C6C3751CF0DD9C00D4F36C /* Main.storyboard */; };
@@ -57,6 +58,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		086D5E0C1CF55F0700AC74D4 /* AppListDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppListDataManager.swift; path = Modules/AppList/AppListDataManager.swift; sourceTree = "<group>"; };
 		08C6C36E1CF0DD9C00D4F36C /* AppsCatalog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppsCatalog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08C6C3711CF0DD9C00D4F36C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08C6C3731CF0DD9C00D4F36C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -129,6 +131,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		086D5E0E1CF6B4A300AC74D4 /* AppDetail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = AppDetail;
+			sourceTree = "<group>";
+		};
+		086D5E0F1CF6B4B900AC74D4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		08C6C3651CF0DD9C00D4F36C = {
 			isa = PBXGroup;
 			children = (
@@ -189,6 +205,7 @@
 		08C6C3A21CF20E4E00D4F36C /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				086D5E0E1CF6B4A300AC74D4 /* AppDetail */,
 				08C6C3B71CF25AE900D4F36C /* AppsList */,
 				08C6C3A31CF20E5500D4F36C /* CategoryList */,
 			);
@@ -212,6 +229,7 @@
 		08C6C3B41CF2434E00D4F36C /* General */ = {
 			isa = PBXGroup;
 			children = (
+				086D5E0F1CF6B4B900AC74D4 /* Models */,
 				08C6C3B51CF2436200D4F36C /* RootWireframe.swift */,
 				08C6C3C41CF3D91A00D4F36C /* BaseWireframe.swift */,
 			);
@@ -228,6 +246,7 @@
 				08C6C3BE1CF3D3CA00D4F36C /* AppListPresenter.swift */,
 				08C6C3C01CF3D4BA00D4F36C /* AppListViewInterface.swift */,
 				08C6C3C21CF3D65500D4F36C /* AppListWireframe.swift */,
+				086D5E0C1CF55F0700AC74D4 /* AppListDataManager.swift */,
 			);
 			name = AppsList;
 			sourceTree = "<group>";
@@ -536,6 +555,7 @@
 				08C6C3741CF0DD9C00D4F36C /* ViewController.swift in Sources */,
 				08C6C3B91CF2C3B700D4F36C /* AppListModel.swift in Sources */,
 				08C6C3A51CF20EDD00D4F36C /* CategoryListModel.swift in Sources */,
+				086D5E0D1CF55F0700AC74D4 /* AppListDataManager.swift in Sources */,
 				08C6C3A91CF222C100D4F36C /* CategoryListInteractor.swift in Sources */,
 				08C6C3BD1CF3D13400D4F36C /* AppListInteractor.swift in Sources */,
 				08C6C3BB1CF2CA4D00D4F36C /* AppListViewController.swift in Sources */,
