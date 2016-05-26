@@ -18,6 +18,7 @@ protocol AppListInteractorOutProtocol {
 
 class AppListInteractor: AppListInteractorInProtocol {
     var output: AppListInteractorOutProtocol?
+    var appListDataManager: AppListDataManager?
     
     init() {
         
@@ -28,9 +29,11 @@ class AppListInteractor: AppListInteractorInProtocol {
         let firstApp = AppListModel(id: "1", name:"a", iconPath: "icon.jpg", summary: "Summary A", price: "$1", categoryId: "1", categoryName: "Games")
         let secondApp = AppListModel(id: "2", name:"b", iconPath: "icon.jpg", summary: "Summary A", price: "$1", categoryId: "1", categoryName: "Games")
         
-        let appsList = [firstApp, secondApp]
-        
-        self.output?.receiveAppList(appsList)
+        appListDataManager?.getAppListForCategoryId(category) { [weak self] (completionData) in
+            
+            self!.output!.receiveAppList(completionData)
+            
+        }
         
         
         

@@ -33,6 +33,7 @@ class AppConfigurator {
         let appListWireframe = AppListWireframe()
         let appListInteractor = AppListInteractor()
         let appListPresenter = AppListPresenter()
+        let appListDataManager = AppListDataManager()
         
         categoryListInteractor.output = categoryListPresenter
         
@@ -51,6 +52,7 @@ class AppConfigurator {
         
         appListPresenter.appListWireframe = appListWireframe
         appListPresenter.appListInteractor = appListInteractor
+        appListInteractor.appListDataManager = appListDataManager
         
         
         

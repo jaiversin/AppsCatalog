@@ -23,6 +23,7 @@ class AppListViewController: UIViewController, AppListViewInterface, UITableView
     
     override func viewDidLoad() {
         configureView()
+//        self.view = noResultsView
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -51,7 +52,14 @@ class AppListViewController: UIViewController, AppListViewInterface, UITableView
             NSLog("No results")
         } else {
             self.dataSource = appList
-            self.tableView.reloadData()
+            self.tableView!.delegate = self
+            self.tableView!.dataSource = self
+            
+            self.tableView!.reloadData()
+            
+            self.collectionView!.delegate = self
+            self.collectionView!.dataSource = self
+            self.collectionView!.reloadData()
         }
     }
     
@@ -62,7 +70,7 @@ class AppListViewController: UIViewController, AppListViewInterface, UITableView
     // MARK: TableView Datasource
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (dataSource?.count)!
+        return (dataSource?.count)! | 0
     }
     
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
