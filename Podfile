@@ -8,6 +8,7 @@ target 'AppsCatalog' do
 
     pod 'Alamofire'
     pod 'SwiftyJSON'
+    pod 'Haneke', '~> 1.0'
 
 # pod 'Alamofire-SwiftyJSON', :git => "https://github.com/SwiftyJSON/Alamofire-SwiftyJSON.git"
 

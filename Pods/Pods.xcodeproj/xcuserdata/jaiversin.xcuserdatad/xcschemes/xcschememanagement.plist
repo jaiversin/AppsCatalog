@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Haneke.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-AppsCatalog.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,12 +37,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>088F376F6D4D1F5DF39AE7C9B0B3883F</key>
+		<key>6AE94D43E24BC9F77822BCFEE27E90A0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6AE94D43E24BC9F77822BCFEE27E90A0</key>
+		<key>721F5C363890DB3021CD23661305B2A2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -47,12 +52,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>91F57CFB3AEFD0447D0C06BBE3B207C3</key>
+		<key>7EBC6AC431D8364666E8F587321DAB64</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C81A1F1DB431B6D8C6EC0AA1A6D74BCE</key>
+		<key>90FDEE63B185A10CCA025D5F00F8D357</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>91F57CFB3AEFD0447D0C06BBE3B207C3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
